@@ -23,8 +23,8 @@ W, H = img.size
 
 # ---- 参数(可按需调整) ----
 margin = 46                 # 内容到邮票边的白边宽度
-hole_r = 22                 # 打孔半径
-pitch = hole_r * 2 + 26     # 打孔间距
+hole_r = 14                 # 打孔半径
+pitch = hole_r * 2 + 18     # 打孔间距
 outer_pad = 90              # 邮票外留白(给投影空间)
 bg_color = (245, 245, 247, 255)
 shadow_alpha = 70           # 投影不透明度 0-255

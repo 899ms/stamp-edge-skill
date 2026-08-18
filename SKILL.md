@@ -33,8 +33,8 @@ python3 ~/.agents/skills/stamp-edge/stamp_effect.py <输入图> <输出图.png> 
 | 参数 | 默认值 | 说明 |
 |------|--------|------|
 | `margin` | 46 | 内容到锯齿边的白边宽度 |
-| `hole_r` | 22 | 打孔半圆半径 |
-| `pitch` | 70 | 打孔间距(= hole_r*2+26) |
+| `hole_r` | 14 | 打孔半圆半径 |
+| `pitch` | 46 | 打孔间距(= hole_r*2+18) |
 | `outer_pad` | 90 | 邮票外留白(投影空间) |
 | `shadow_alpha` | 70 | 投影不透明度 |
 
