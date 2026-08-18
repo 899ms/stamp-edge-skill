@@ -16,13 +16,15 @@ from PIL import Image, ImageDraw, ImageFilter
 
 SRC = sys.argv[1]
 OUT = sys.argv[2] if len(sys.argv) > 2 else "stamp.png"
-WITH_BG = len(sys.argv) > 3 and sys.argv[3] == "bg"
+opts = set(sys.argv[3:])
+WITH_BG = "bg" in opts        # 浅灰白底成品图(默认透明)
+WITH_MARGIN = "margin" in opts  # 加白边(默认无白边,内容顶到锯齿边)
 
 img = Image.open(SRC).convert("RGBA")
 W, H = img.size
 
 # ---- 参数(可按需调整) ----
-margin = 46                 # 内容到邮票边的白边宽度
+margin = 46 if WITH_MARGIN else 0  # 内容到邮票边的白边宽度(默认无白边)
 hole_r = 14                 # 打孔半径
 pitch = hole_r * 2 + 18     # 打孔间距
 outer_pad = 90              # 邮票外留白(给投影空间)
